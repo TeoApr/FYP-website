@@ -20,7 +20,7 @@ body {
 }
 
 #navbar-container #logo-fypl img{
-    height: 55px;
+    height: 68px;
     width: auto;
 }
 
@@ -73,7 +73,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 .title-home h1 {
@@ -88,9 +88,23 @@ body {
     border-radius: 20px;
 }
 
+.title-home button:hover {
+    margin-top: 15px;
+    /* background: none; */
+    background-color: #fefefe;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
 .title-home button a {
     text-decoration: none;
     color: white;
+}
+
+.title-home button a:hover{
+    text-decoration: none;
+    color: #59282b;
 }
 
 /* faq */
