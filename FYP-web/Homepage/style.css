@@ -144,6 +144,31 @@ body {
     width: 400px;
 }
 
+.testimonial {
+    background-color: #59282b;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-top: 1px solid white;
+}
+
+.testimonial .card-testi{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+}
+
+.testimonial .card-testi img {
+    height: 300px;
+}
+
 .card-faq {
     background-image: url('../../assets//home-back.png');
     background-color: #59282b;
@@ -369,6 +394,23 @@ footer a img {
         border-top: 1px solid white;
         border-bottom: 1px solid white;
     }
+
+    .testimonial h1{
+        margin-bottom: 25px;
+    }
+    
+    .testimonial .card-testi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: white;
+    }
+    
+    .testimonial .card-testi img {
+        height: 300px;
+    }
 }
 
 /* responsive */
@@ -443,6 +485,23 @@ footer a img {
         justify-content: center;
         gap: 0px;
     }
+
+    .testimonial h1{
+        margin-bottom: 25px;
+    }
+    
+    .testimonial .card-testi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: white;
+    }
+    
+    .testimonial .card-testi img {
+        height: 300px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -481,6 +540,23 @@ footer a img {
         align-items: center;
         justify-content: center;
         gap: 0px;
+    }
+
+    .testimonial h1{
+        margin-bottom: 25px;
+    }
+    
+    .testimonial .card-testi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: white;
+    }
+    
+    .testimonial .card-testi img {
+        height: 170px;
     }
 
     footer {
