@@ -70,3 +70,33 @@ searchInput.addEventListener('keyup', function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const fromA = params.get("from") === "A";
+
+  if (fromA) {
+    // Slide in animasi secara berurutan
+    const boxes = [document.getElementById("box1"), document.getElementById("box2"), document.getElementById("box3")];
+
+    boxes.forEach((box, index) => {
+      setTimeout(() => {
+        box.classList.add("slide-in");
+      }, index * 300); // delay antar kotak
+    });
+  }
+});
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = `${0.2 * index}s`;
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  faqItems.forEach((item, i) => {
+    observer.observe(item);
+  });
