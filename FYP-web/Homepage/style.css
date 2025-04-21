@@ -373,6 +373,7 @@ footer a img {
         background-color: #59282b;
         padding: 100px 0 0 10px;
         transition: 0.3s;
+        z-index: 1;
     }
     
     #resp-nav.active{
