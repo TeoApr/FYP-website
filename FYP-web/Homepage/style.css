@@ -43,7 +43,21 @@ body {
 #navbar-container #logo-fypl img{
     height: 68px;
     width: auto;
+    transition: transform 0.3s ease;
 }
+
+#navbar-container #logo-fypl img:hover{
+    animation: rotateInfinite 2s linear infinite;
+}
+
+@keyframes rotateInfinite {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 #navbar-container {
     display: flex;
