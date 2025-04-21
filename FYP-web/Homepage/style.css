@@ -160,7 +160,7 @@ body {
 
 .card-faq {
     background-image: url('../../assets//home-back.png');
-    background-color: #cd7c8b;
+    background-color: #59282b;
     background-position: 50% 25%;
     background-size: cover;
     display: flex;
@@ -168,6 +168,8 @@ body {
     align-items: center;
     justify-content: center;
     height : 300px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .card-faq div {
@@ -370,7 +372,7 @@ footer a img {
 @media (max-width: 1024px){
     .card-faq {
         background-image: url('../../assets//home-back.png');
-        background-color: #cd7c8b;
+        background-color: #59282b;
         background-position: 50% 10%;
         background-size: 1800px;
         display: flex;
@@ -378,6 +380,8 @@ footer a img {
         align-items: center;
         justify-content: center;
         height: 300px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
     }
 }
 
@@ -429,7 +433,7 @@ footer a img {
 
     .card-faq {
         background-image: url('../../assets//home-back.png');
-        background-color: #cd7c8b;
+        background-color: #59282b;
         background-position: 50% 15%;
         background-size: 1500px;
         display: flex;
@@ -437,6 +441,8 @@ footer a img {
         align-items: center;
         justify-content: center;
         height: 300px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
     }
 
     .card-faq h1 {
@@ -468,7 +474,7 @@ footer a img {
 
     .card-faq {
         background-image: url('../../assets//home-back.png');
-        background-color: #cd7c8b;
+        background-color: #59282b;
         background-position: 50% -100%;
         background-size: 1290px;
         display: flex;
