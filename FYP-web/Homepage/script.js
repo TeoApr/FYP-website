@@ -69,3 +69,4 @@ searchInput.addEventListener('keyup', function() {
         }
     });
 });
+
