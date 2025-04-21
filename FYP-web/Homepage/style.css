@@ -88,6 +88,7 @@ body {
     border-radius: 20px;
 }
 
+<<<<<<< Updated upstream
 .title-home button:hover {
     margin-top: 15px;
     /* background: none; */
@@ -96,6 +97,8 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
 }
+=======
+>>>>>>> Stashed changes
 
 .title-home button a {
     text-decoration: none;
