@@ -158,15 +158,20 @@ body {
 }
 
 .card-faq {
-    background-image: url('../../assets/fypl-alsut-trans.png');
+    background-image: url('../../assets//home-back.png');
     background-color: #cd7c8b;
-    background-position: center;
-    background-size: 50%;
+    background-position: 50% 25%;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height : 300px;
+}
+
+.card-faq div {
+    display: flex;
+    gap: 12px;
 }
 
 .card-faq h1 {
@@ -409,4 +414,36 @@ footer a img {
     .title-home h1 {
         font-size: 28px;
     }
+
+    .first-card div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .card-faq h1 {
+        font-size: 25px;
+        color: white;
+    }
+
+    .card-faq div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    footer {
+        background-color: #59282b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 140px;
+    }
+    
 }
