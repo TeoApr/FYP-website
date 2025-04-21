@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('/assets/bg_move.png');
+    background-image: url('../../assets/bg_move.png');
     background-size: cover;
     background-position: 50% 65%;
     background-color: #59282b;
