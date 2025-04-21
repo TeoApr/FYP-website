@@ -117,7 +117,6 @@ body {
     border-radius: 20px;
 }
 
-<<<<<<< Updated upstream
 .title-home button:hover {
     margin-top: 15px;
     /* background: none; */
@@ -127,8 +126,6 @@ body {
     border-radius: 20px;
     transition: 0.45s;
 }
-=======
->>>>>>> Stashed changes
 
 .title-home button a {
     text-decoration: none;
