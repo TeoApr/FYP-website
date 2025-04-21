@@ -76,11 +76,6 @@ body {
     color:#cd7c8b;
 }
 
-.kotak-1{
-    color: wheat;
-    width: 100px    ;
-}
-
 #resp-nav li a:hover .kotak-1{
     color: white;
 }
@@ -109,15 +104,17 @@ body {
     font-size: 40px;
 }
 
-.title-home button {
+.title-home a {
     margin-top: 15px;
     background: none;
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 20px;
+    text-decoration: none;
+    color: white;
 }
 
-.title-home button:hover {
+.title-home a:hover {
     margin-top: 15px;
     /* background: none; */
     background-color: #fefefe;
@@ -125,17 +122,7 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     transition: 0.45s;
-}
-
-.title-home button a {
-    text-decoration: none;
-    color: white;
-}
-
-.title-home button:hover a{
-    text-decoration: none;
     color: #59282b;
-    transition: 0.45s;
 }
 
 /* fyp */
@@ -174,15 +161,17 @@ body {
     color: white;
 }
 
-.card-faq button {
+.card-faq a {
     margin-top: 15px;
     background: none;
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 20px;
+    text-decoration: none;
+    color: white;
 }
 
-.card-faq button:hover {
+.card-faq a:hover {
     margin-top: 15px;
     /* background: none; */
     background-color: #fefefe;
@@ -190,17 +179,12 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     transition: 0.45s;
+    color: #59282b;
 }
 
 .card-faq button a {
     text-decoration: none;
     color: white;
-}
-
-.card-faq button:hover a{
-    text-decoration: none;
-    color: #59282b;
-    transition: 0.45s;
 }
 
 /* faq */
@@ -325,18 +309,24 @@ body {
     justify-content: center;
 }
 
-#faq-button button a {
+#faq-button a {
+    margin-top: 15px;
     text-decoration: none;
     color: white;
-}
-
-#faq-button button {
-    margin-top: 15px;
     margin-bottom: 50px;
     background: none;
     border: 1px solid white;
-    padding: 20px 20px;
+    padding: 10px 20px;
     border-radius: 20px;
+    
+}
+
+#faq-button a:hover{
+    background-color: #fefefe;
+    border: 1px solid white;
+    transition: 0.45s;
+    color: #59282b;
+    transition: 0.45s
 }
 
 /* footer */
