@@ -412,14 +412,26 @@ body {
 }
 
 .container-fypl {
-    margin-top: 50px;
+    background-image: url(../../assets/bg_move.png);
+    background-size: 1440px;
+    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
     gap: 5px;
+    animation: moveBackground 10s linear infinite;
 }
+
+@keyframes moveBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 1705px 0; /* Adjust based on image width/speed */
+    }
+  }
 
 .container-fypl p{
     margin-bottom: 20px;
@@ -676,7 +688,7 @@ footer a img {
         background-size: cover;
         background-position: 50% 65%;
         background-color: #59282b;
-        height: 1350px;
+        height: 100%;
         /* overflow: hidden; */
         background-repeat: repeat-x;
         background-size: cover;
