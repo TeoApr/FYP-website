@@ -55,6 +55,16 @@
           settle in. it's not just orientation—it's the start of something big.
         </p>
         <p>welcome to binus, your story starts here.</p>
+        <button id="exploreButton">explore!</button>
+      </div>
+    </div>
+
+    <div class="testimonial" id="content-section">
+      <h1>insight</h1>
+      <p>what ex f.chaperone says?</p>
+      <div class="card-testi">
+        <img src="../../assets/shae-testi.png" alt="" />
+        <img src="../../assets/teo-testi.png" alt="" />
       </div>
     </div>
 
@@ -63,7 +73,7 @@
         <h1>want to know</h1>
         <h1>more about fyp?</h1>
       </div>
-      
+
       <a href="./faq.html">click here!</a>
     </div>
 
@@ -76,5 +86,13 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+      document
+        .getElementById("exploreButton")
+        .addEventListener("click", function () {
+          const contentSection = document.getElementById("content-section");
+          contentSection.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
   </body>
 </html>

@@ -15,6 +15,8 @@ if(close) {
     })
 }
 
+
+
 // faq
 const faqQuestions = document.querySelectorAll('.faq-question');
         
@@ -100,3 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
   faqItems.forEach((item, i) => {
     observer.observe(item);
   });
+
+
+// fyp
+document.getElementById('exploreButton').addEventListener('click', function() {
+  const contentSection = document.getElementById('content-section');
+  contentSection.scrollIntoView({ behavior: 'smooth' });
+});
