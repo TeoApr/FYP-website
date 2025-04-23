@@ -404,6 +404,33 @@ body {
     transition: 0.45s
 }
 
+/* fypl */
+.main-card-fypl {
+    background-image: url('../../assets/main-card-fypl.png');
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+.container-fypl {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 5px;
+}
+
+.container-fypl p{
+    margin-bottom: 20px;
+}
+
+.container-fypl .card-fypl {
+    display: flex;
+    
+}
+
 /* footer */
 
 footer {
