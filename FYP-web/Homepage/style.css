@@ -205,7 +205,7 @@ body {
     justify-content: center;
     gap: 50px;
     color: white;
-}
+}   
 
 .testimonial .card-testi img {
     height: 300px;
@@ -488,6 +488,7 @@ body {
     background-color: #4C2225;
     height: 200px;
     border-top: 1px solid white;
+    margin-top: 50px;
 }
 
 .register-card a {
@@ -748,6 +749,21 @@ footer a img {
 
     body > div.testimonial > div > img:nth-child(1) {
         margin-top: 25px;
+    }
+
+    .main-card-fypl {
+        background-image: url('../../assets/main-card-fypl.png');
+        background-position: center;
+        background-size: cover;
+        height: 200px;
+    }
+
+    .container-fypl .card-fypl {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
 
     footer {
