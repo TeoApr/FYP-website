@@ -585,6 +585,13 @@ footer a img {
     .testimonial .card-testi img {
         height: 300px;
     }
+
+    .main-card-fypl {
+        background-image: url('../../assets/main-card-fypl.png');
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+    }
 }
 
 /* responsive */
@@ -681,6 +688,13 @@ footer a img {
     .testimonial .card-testi img {
         height: 300px;
     }
+
+    .main-card-fypl {
+        background-image: url('../../assets/main-card-fypl.png');
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -772,7 +786,7 @@ footer a img {
         background-image: url('../../assets/main-card-fypl.png');
         background-position: center;
         background-size: cover;
-        height: 200px;
+        height: 180px;
     }
 
     .container-fypl .card-fypl {
