@@ -93,7 +93,28 @@
           const contentSection = document.getElementById("content-section");
           contentSection.scrollIntoView({ behavior: "smooth" });
         });
-    </script>
 
+        document.addEventListener("DOMContentLoaded", () => {
+          const bgImages = [
+            "../../assets/card-1.png",
+            "../../assets/card-2.png",
+            "../../assets/card-3.jpeg",
+            "../../assets/card-4.jpeg"
+          ];
+        
+          let current = 0;
+          const card = document.querySelector(".first-card");
+        
+          if (!card) {
+            console.warn("Element .first-card not found");
+            return;
+          }
+        
+          setInterval(() => {
+            card.style.backgroundImage = `url('${bgImages[current]}')`;
+            current = (current + 1) % bgImages.length;
+          }, 1500);
+        });
+    </script>
   </body>
 </html>

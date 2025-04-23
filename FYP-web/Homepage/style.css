@@ -161,7 +161,6 @@ body {
 .first-card div button {
     margin-top: 15px;
     background: none;
-    /* background-color: #fefefe; */
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 20px;
@@ -172,7 +171,6 @@ body {
 
 .first-card div button:hover {
     margin-top: 15px;
-    /* background: none; */
     background-color: #fefefe;
     border: 1px solid white;
     padding: 10px 20px;
@@ -642,7 +640,7 @@ footer a img {
         background-size: cover;
         background-position: 50% 65%;
         background-color: #59282b;
-        height: 1100px;
+        height: 1350px;
         /* overflow: hidden; */
         background-repeat: repeat-x;
         background-size: cover;

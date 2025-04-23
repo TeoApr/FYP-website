@@ -109,3 +109,4 @@ document.getElementById('exploreButton').addEventListener('click', function() {
   const contentSection = document.getElementById('content-section');
   contentSection.scrollIntoView({ behavior: 'smooth' });
 });
+
