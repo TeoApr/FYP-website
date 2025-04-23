@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="timeline-container">
+    <div class="timeline-container" id="timeline-sec">
 
       <div class="title-timeline">
         <h1>see our timeline!</h1>
@@ -190,7 +190,7 @@
       document
         .getElementById("exploreButton")
         .addEventListener("click", function () {
-          const contentSection = document.getElementById("content-section");
+          const contentSection = document.getElementById("timeline-sec");
           contentSection.scrollIntoView({ behavior: "smooth" });
         });
 
