@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Timeline</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+      background-color: #121212;
+      color: white;
+    }
+    
+    .timeline-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+    
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: 1;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px 0;
+      z-index: 2;
+    }
+    
+    .timeline-content {
+      width: 100%;
+      text-align: center;
+      padding: 0 10px;
+    }
+    
+    .track-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .album-title {
+      font-size: 12px;
+      color: #f8ad30;
+      margin-bottom: 2px;
+    }
+    
+    .track-time {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .track-note {
+      font-size: 10px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">ROCK STEP</div>
+        <div class="track-title">Mogwai</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">YOUNG TEAM</div>
+        <div class="track-title">Sigur Rós</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">LIFT YOUR SKINNY FISTS...</div>
+        <div class="track-title">Explosions In The Sky</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">F# A# ∞</div>
+        <div class="track-title">This Will Destroy You</div>
+        <div class="track-note">symphonic noise / orchestrated ambience</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">THE EARTH IS NOT...</div>
+        <div class="track-title">Thee Silver Mount Zion</div>
+        <div class="track-note">13.45 min / Full movement</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">LIFTED</div>
+        <div class="track-title">Godspeed You! Black Emperor</div>
+        <div class="track-note">best metal rock / strongest dynamic</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">F# A# ∞</div>
+        <div class="track-title">God Is An Astronaut</div>
+        <div class="track-note">perfection of post-rock dynamics</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">TAKK...</div>
+        <div class="track-title">Tides From Nebula</div>
+        <div class="track-note">significant vocals / pure</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">ROCK STEP</div>
+        <div class="track-title">65 Days Of Static</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">LITTLE</div>
+        <div class="track-title">Mono/achewill</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">EL TEN ELEVEN</div>
+        <div class="track-title">El Ten Eleven</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">YOUNG TEAM</div>
+        <div class="track-title">Yndi Halda</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">HAWK IS HOWLING</div>
+        <div class="track-title">I Like Trains</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="album-title">ENVY / EPIC</div>
+        <div class="track-title">Envy</div>
+      </div>
+      <div class="timeline-dot"></div>
+    </div>
+  </div>
+</body>
+</html>
