@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <title>fyp</title>
+    <title>fypl</title>
   </head>
   <body>
     <nav id="navbar-container">
@@ -30,6 +30,7 @@
         <ul id="resp-nav">
           <li><a href="./fyp.html">fyp</a></li>
           <li><a href="./faq.html">faq</a></li>
+          <li><a href="./fypl.html">fypl</a></li>
           <a href="#" id="close"
             ><img src="../../assets/x-button.png" alt=""
           /></a>
@@ -40,42 +41,26 @@
         <i id="bar"><img src="../../assets/drop-button.png" alt="" /></i>
       </div>
     </nav>
+    
+    <div class="main-card-fypl">
+    </div>
 
-    <div class="first-card">
-      <div>
-        <h1>what is fyp?</h1>
-        <p>your first step into the binusian journey.</p>
-        <p>a space to explore, connect, and grow—without the pressure.</p>
-        <p>
-          you'll meet awesome friends, discover new passions, and get a feel for
-          what uni life is really like.
-        </p>
-        <p>
-          expect fun events, creative projects, and chill moments that help you
-          settle in. it's not just orientation—it's the start of something big.
-        </p>
-        <p>welcome to binus, your story starts here.</p>
-        <button id="exploreButton">explore!</button>
+    <div class="container-fypl">
+      <h1>school of computer science</h1>
+      <p>code-ing nerds? here's the peoples</p>
+      <div class="card-fypl">
+        <div class="fypl-left">
+          <img src="../../assets/juan-socs.JPG" alt="">
+          <p>juan ariviano c.</p>
+        </div>
+        <div class="fypl-right">
+          <img src="../../assets/teo-socs.JPG" alt="">
+          <p>teo apriyandi</p>
+        </div>
       </div>
     </div>
 
-    <div class="testimonial" id="content-section">
-      <h1>insight</h1>
-      <p>what ex f.chaperone says?</p>
-      <div class="card-testi">
-        <img src="../../assets/shae-testi.png" alt="" />
-        <img src="../../assets/teo-testi.png" alt="" />
-      </div>
-    </div>
 
-    <div class="card-faq">
-      <div>
-        <h1>want to know</h1>
-        <h1>more about fyp?</h1>
-      </div>
-
-      <a href="./faq.html">click here!</a>
-    </div>
 
     <footer>
       <p>see you in fyp! - @efwaipiel.alsut</p>
@@ -86,14 +71,6 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script>
-      document
-        .getElementById("exploreButton")
-        .addEventListener("click", function () {
-          const contentSection = document.getElementById("content-section");
-          contentSection.scrollIntoView({ behavior: "smooth" });
-        });
-    </script>
 
   </body>
 </html>
