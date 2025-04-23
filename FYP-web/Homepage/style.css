@@ -426,11 +426,59 @@ body {
 
 .container-fypl .card-fypl {
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-fypl .card-fypl .fypl-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-fypl .card-fypl .fypl-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-fypl .card-fypl .fypl-left img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container-fypl .card-fypl .fypl-right img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: 0 10%;
+}
+
+.container-fypl .card-fypl .fypl-solo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-fypl .card-fypl .fypl-solo img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: 0 10%;
 }
 
 /* footer */
-
 footer {
     background-color: #59282b;
     display: flex;
