@@ -14,7 +14,7 @@ body {
     background-repeat: repeat-x;
     background-size: cover;
     animation: moveBackground 10s linear infinite;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 /* .moving-background {
@@ -498,8 +498,8 @@ body {
 }
 
 .container-fypl {
-    background-image: url(../../assets/bg_move_fypl.png);
-    background-size: 100%;
+    background-image: url(../../assets/bg_move.png);
+    background-size: 1255px;
     /* margin-top: 50px; */
     padding-top: 50px;
     display: flex;
