@@ -413,9 +413,9 @@ body {
 
 .container-fypl {
     background-image: url(../../assets/bg_move.png);
-    background-size: 1150px;
+    background-size: 1125px;
     /* margin-top: 50px; */
-    padding: 50px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -490,6 +490,10 @@ body {
     object-fit: cover;
     border-radius: 10px;
     object-position: 0 10%;
+}
+
+body > div:nth-child(14) {
+    padding-bottom: 30px;
 }
 
 
