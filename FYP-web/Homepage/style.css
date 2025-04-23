@@ -222,7 +222,7 @@ body {
     justify-content: center;
     height : 300px;
     border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
 }
 
 .card-faq div {
@@ -487,6 +487,7 @@ body {
     color: white;
     background-color: #4C2225;
     height: 200px;
+    border-top: 1px solid white;
 }
 
 .register-card a {
@@ -519,6 +520,7 @@ footer {
     justify-content: center;
     gap: 30px;
     height: 80px;
+    border-top: 1px solid white;
 }
 
 footer p {
@@ -541,7 +543,7 @@ footer a img {
         justify-content: center;
         height: 300px;
         border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        /* border-bottom: 1px solid white; */
     }
 
     .testimonial h1{
@@ -624,7 +626,7 @@ footer a img {
         justify-content: center;
         height: 300px;
         border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        /* border-bottom: 1px solid white; */
     }
 
     .card-faq h1 {
