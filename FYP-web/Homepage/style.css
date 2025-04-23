@@ -167,6 +167,7 @@ body {
     transition: 0.45s;
     color: white;
     width: 110px;
+    font-size: 15px;
 }
 
 .first-card div button:hover {
@@ -478,6 +479,38 @@ body {
     object-position: 0 10%;
 }
 
+.register-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #4C2225;
+    height: 200px;
+}
+
+.register-card a {
+    margin-top: 15px;
+    background: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.register-card a:hover {
+    margin-top: 15px;
+    /* background: none; */
+    background-color: #fefefe;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.45s;
+    color: #59282b;
+}
+
+
 /* footer */
 footer {
     background-color: #59282b;
@@ -485,7 +518,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    height: 100px;
+    height: 80px;
 }
 
 footer p {
