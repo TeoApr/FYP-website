@@ -464,6 +464,27 @@ footer a img {
         font-size: 28px;
     }
 
+    body {
+        background-image: url('../../assets/bg_move.png');
+        background-size: cover;
+        background-position: 50% 65%;
+        background-color: #59282b;
+        height: 1100px;
+        /* overflow: hidden; */
+        background-repeat: repeat-x;
+        background-size: cover;
+        animation: moveBackground 10s linear infinite;
+    }
+
+    @keyframes moveBackground {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 1705px 0; /* Adjust based on image width/speed */
+        }
+      }
+
     .first-card div {
         display: flex;
         flex-direction: column;
