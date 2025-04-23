@@ -184,12 +184,14 @@ body {
 }
 
 .timeline-container {
-    background-color: #59282b;
+    /* background-color: #59282b; */
+    background-image: url('../../assets/bg_move.png');
+    background-size: 1000px;
     position: relative;
     width: 100%;
     /* max-width: 600px; */
     padding: 0 20px;
-
+    animation: moveBackground 10s linear infinite;
 }
   
   .timeline-line {
@@ -197,7 +199,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 90%;
+    height: 83%;
     background-color: rgba(255, 255, 255, 0.3);
     z-index: 1;
   }
@@ -226,13 +228,14 @@ body {
   }
   
   .track-title {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    /* font-weight: bold; */
     margin-bottom: 5px;
+    color: white;
   }
   
   .album-title {
-    font-size: 12px;
+    font-size: 20px;
     color: #f8ad30;
     margin-bottom: 2px;
   }
@@ -243,16 +246,14 @@ body {
   }
   
   .track-note {
-    font-size: 10px;
+    font-size: 17px;
     font-style: italic;
     color: rgba(255, 255, 255, 0.5);
     margin-top: 2px;
   }
 
-.timeline-container .timeline-end {
-
-    margin-bottom: 100px;
-
+.timeline-container .timeline-end p {
+    padding-bottom: 100px;
 }
 
 .testimonial {
@@ -880,6 +881,24 @@ footer a img {
         align-items: center;
         gap: 30px;
     }
+
+      .track-title {
+    font-size: 25px;
+    /* font-weight: bold; */
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .album-title {
+    font-size: 20px;
+    color: #f8ad30;
+    margin-bottom: 2px;
+  }
+  
+  .track-time {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
     footer {
         background-color: #59282b;
