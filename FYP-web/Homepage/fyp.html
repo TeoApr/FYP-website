@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="timeline-container">
+    <div class="timeline-container" id="timeline-sec">
 
       <div class="title-timeline">
         <h1>see our timeline!</h1>
@@ -173,7 +173,7 @@
     </div>
 
     <div class="register-card">
-      <h1>register yourself now!</h1>
+      <h1>register now!</h1>
       <a href="https://freshmen.apps.binus.ac.id">go to freshman apps</a>
     </div>
 
@@ -190,16 +190,16 @@
       document
         .getElementById("exploreButton")
         .addEventListener("click", function () {
-          const contentSection = document.getElementById("content-section");
+          const contentSection = document.getElementById("timeline-sec");
           contentSection.scrollIntoView({ behavior: "smooth" });
         });
 
       document.addEventListener("DOMContentLoaded", () => {
         const bgImages = [
           "../../assets/card-1.png",
-          "../../assets/card-2.png",
-          "../../assets/card-3.jpeg",
-          "../../assets/card-4.jpeg",
+          "../../assets/card-2.jpg",
+          "../../assets/card-3.jpg",
+          "../../assets/card-4.jpg",
         ];
 
         let current = 0;
