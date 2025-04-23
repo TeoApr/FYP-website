@@ -8,7 +8,7 @@
 body {
     background-image: url('../../assets/bg_move.png');
     background-size: cover;
-    background-position: 50% 65%;
+    background-position: center center;
     background-color: #59282b;
     height: 100vh;
     background-repeat: repeat-x;
