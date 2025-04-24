@@ -583,7 +583,7 @@ body {
   position: relative;
 }
 
-/* Make container-fypl take full height of slide */
+/* Style for container-fypl elements inside carousel slides */
 .carousel-slide .container-fypl {
   height: 100%;
   width: 100%;
@@ -594,9 +594,9 @@ body {
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  animation: none; /* Disable the original animation */
   background-image: url("./assets/bg_move.png");
   background-size: 1255px;
+  color: white;
 }
 
 /* Navigation buttons */
@@ -656,7 +656,7 @@ body {
   transform: scale(1.2);
 }
 
-/* Enhanced confetti animation */
+/* Confetti container and animation */
 .confetti-container {
   position: absolute;
   top: 0;
@@ -685,7 +685,22 @@ body {
   }
 }
 
-/* Enhanced card hover effects */
+/* Card styles */
+.card-fypl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.fypl-solo,
+.fypl-left,
+.fypl-right {
+  text-align: center;
+  cursor: pointer;
+}
+
 .fypl-solo img,
 .fypl-left img,
 .fypl-right img {
@@ -701,14 +716,17 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Make text more visible */
 .container-fypl h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 5px;
+  font-size: 32px;
+  text-transform: lowercase;
 }
 
 .container-fypl p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+  margin-bottom: 15px;
 }
 
 body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
@@ -948,6 +966,15 @@ footer a img {
   .container-fypl h1 {
     font-size: 24px;
   }
+  
+  .fypl-solo img, .fypl-left img, .fypl-right img {
+    height: 250px;
+  }
+  
+  .card-fypl {
+    flex-direction: column;
+    gap: 15px;
+  }
 
   .timeline-container {
     flex-direction: column;
@@ -1105,6 +1132,10 @@ footer a img {
 
   .carousel-wrapper {
     height: 80vh;
+  }
+  
+  .fypl-solo img, .fypl-left img, .fypl-right img {
+    height: 170px;
   }
 
   footer {
