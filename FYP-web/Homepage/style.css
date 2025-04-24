@@ -6,21 +6,21 @@
 }
 
 body {
-  background-image: url("../../assets/bg_move.png");
-  background-size: cover;
-  background-position: center center;
-  background-color: #59282b;
-  height: 100vh;
-  background-repeat: repeat-x;
-  background-size: cover;
-  animation: moveBackground 10s linear infinite;
-  overflow-x: hidden;
+    background-image: url('../../assets/bg_move.png');
+    background-size: cover;
+    background-position: center center;
+    background-color: #59282b;
+    height: 100vh;
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: moveBackground 10s linear infinite;
+    overflow-x: hidden;
 }
 
 /* .moving-background {
     width: 100%;
     height: 100vh;
-    background-image: url('../../assets/background.png'); /* Replace with your image 
+    background-image: url('../assets/background.png'); /* Replace with your image 
     background-repeat: repeat-x;
     background-size: cover;
     animation: moveBackground 10s linear infinite;
@@ -141,15 +141,15 @@ body {
 
 /* fyp */
 .first-card {
-  background-image: url("../../assets/card-1.png");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  height: 500px;
-  border-bottom: 1px solid white;
+    background-image: url('../../assets/card-1.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 500px;
+    border-bottom: 1px solid white;
 }
 
 .first-card div {
@@ -195,25 +195,14 @@ body {
 }
 
 .timeline-container {
-  position: relative;
-  max-width: 500px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.timeline-title {
-  font-size: 5rem;
-  font-weight: bold;
-  line-height: 0.9;
-  position: relative;
-  text-transform: lowercase;
-  color: white;
-  margin-right: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
+    /* background-color: #59282b; */
+    background-image: url('../../assets/bg_move.png');
+    background-size: 1000px;
+    position: relative;
+    width: 100%;
+    /* max-width: 600px; */
+    padding: 0 20px;
+    animation: moveBackground 10s linear infinite;
 }
 
 .timeline-title span {
@@ -342,17 +331,17 @@ body {
 }
 
 .card-faq {
-  background-image: url("../../assets//home-back.png");
-  background-color: #59282b;
-  background-position: 50% 25%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  border-top: 1px solid white;
-  /* border-bottom: 1px solid white; */
+    background-image: url('../../assets//home-back.png');
+    background-color: #59282b;
+    background-position: 50% 25%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height : 300px;
+    border-top: 1px solid white;
+    /* border-bottom: 1px solid white; */
 }
 
 .card-faq div {
@@ -544,25 +533,25 @@ body {
 
 /* fypl */
 .main-card-fypl {
-  background-image: url("../../assets/main-card-fypl.png");
-  background-position: center;
-  background-size: cover;
-  height: 600px;
-  border-bottom: 1px solid white;
+    background-image: url('../../assets/main-card-fypl.png');
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    border-bottom: 1px solid white;
 }
 
 .container-fypl {
-  background-image: url(../../assets/bg_move.png);
-  background-size: 1255px;
-  /* margin-top: 50px; */
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  gap: 5px;
-  animation: moveBackground 10s linear infinite;
+    background-image: url(../../assets/bg_move.png);
+    background-size: 1255px;
+    /* margin-top: 50px; */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 5px;
+    animation: moveBackground 10s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -715,20 +704,20 @@ footer a img {
   height: 50px;
 }
 
-@media (max-width: 1024px) {
-  .card-faq {
-    background-image: url("../../assets//home-back.png");
-    background-color: #59282b;
-    background-position: 50% 10%;
-    background-size: 1800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    border-top: 1px solid white;
-    /* border-bottom: 1px solid white; */
-  }
+@media (max-width: 1024px){
+    .card-faq {
+        background-image: url('../../assets//home-back.png');
+        background-color: #59282b;
+        background-position: 50% 10%;
+        background-size: 1800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        border-top: 1px solid white;
+        /* border-bottom: 1px solid white; */
+    }
 
   .testimonial h1 {
     margin-bottom: 0px;
@@ -752,12 +741,12 @@ footer a img {
     height: 300px;
   }
 
-  .main-card-fypl {
-    background-image: url("../../assets/main-card-fypl.png");
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-  }
+    .main-card-fypl {
+        background-image: url('../../assets/main-card-fypl.png');
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+    }
 }
 
 /* responsive */
@@ -806,19 +795,19 @@ footer a img {
     font-size: 24px;
   }
 
-  .card-faq {
-    background-image: url("../../assets//home-back.png");
-    background-color: #59282b;
-    background-position: 50% 15%;
-    background-size: 1500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    border-top: 1px solid white;
-    /* border-bottom: 1px solid white; */
-  }
+    .card-faq {
+        background-image: url('../../assets//home-back.png');
+        background-color: #59282b;
+        background-position: 50% 15%;
+        background-size: 1500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        border-top: 1px solid white;
+        /* border-bottom: 1px solid white; */
+    }
 
   .card-faq h1 {
     font-size: 25px;
@@ -855,27 +844,12 @@ footer a img {
     height: 300px;
   }
 
-  .main-card-fypl {
-    background-image: url("../../assets/main-card-fypl.png");
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-  }
-
-  .timeline-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .timeline-title {
-    margin-right: 0;
-    margin-bottom: 20px;
-    flex-direction: row;
-  }
-
-  .timeline-title span {
-    margin-right: 5px;
-  }
+    .main-card-fypl {
+        background-image: url('../../assets/main-card-fypl.png');
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -883,17 +857,17 @@ footer a img {
     font-size: 28px;
   }
 
-  body {
-    background-image: url("../../assets/bg_move.png");
-    background-size: cover;
-    background-position: 50% 65%;
-    background-color: #59282b;
-    height: 100%;
-    /* overflow: hidden; */
-    background-repeat: repeat-x;
-    background-size: cover;
-    animation: moveBackground 10s linear infinite;
-  }
+    body {
+        background-image: url('../../assets/bg_move.png');
+        background-size: cover;
+        background-position: 50% 65%;
+        background-color: #59282b;
+        height: 100%;
+        /* overflow: hidden; */
+        background-repeat: repeat-x;
+        background-size: cover;
+        animation: moveBackground 10s linear infinite;
+    }
 
   @keyframes moveBackground {
     from {
@@ -912,17 +886,17 @@ footer a img {
     font-size: 15px;
   }
 
-  .card-faq {
-    background-image: url("../../assets//home-back.png");
-    background-color: #59282b;
-    background-position: 50% -100%;
-    background-size: 1290px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-  }
+    .card-faq {
+        background-image: url('../../assets//home-back.png');
+        background-color: #59282b;
+        background-position: 50% -100%;
+        background-size: 1290px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
 
   .card-faq h1 {
     font-size: 25px;
@@ -963,12 +937,12 @@ footer a img {
     margin-top: 25px;
   }
 
-  .main-card-fypl {
-    background-image: url("../../assets/main-card-fypl.png");
-    background-position: center;
-    background-size: cover;
-    height: 180px;
-  }
+    .main-card-fypl {
+        background-image: url('../../assets/main-card-fypl.png');
+        background-position: center;
+        background-size: cover;
+        height: 180px;
+    }
 
   .container-fypl .card-fypl {
     display: flex;
