@@ -1,0 +1,9 @@
+{
+    "projects": [],
+    "rewrites": [],
+    "redirects": [],
+    "headers": [],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "outputDirectory": "FYP-web/Homepage"
+  }
