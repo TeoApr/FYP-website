@@ -150,6 +150,7 @@ body {
   color: white;
   height: 500px;
   border-bottom: 1px solid white;
+  /* background-position: 100% 75%; */
 }
 
 .first-card div {
@@ -1066,6 +1067,19 @@ footer a img {
       background-position: 1705px 0; /* Adjust based on image width/speed */
     }
   }
+
+  .first-card {
+    /* background-image: url("./assets/card-1.png"); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 500px;
+    border-bottom: 1px solid white;
+    background-position: center;
+}
 
   .first-card div {
     display: flex;
