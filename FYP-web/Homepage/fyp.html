@@ -61,97 +61,70 @@
       </div>
     </div>
 
-    <div class="timeline-container" id="timeline-sec">
-
-      <div class="title-timeline">
-        <h1>see our timeline!</h1>
-        <p>first year program 2029</p>
-      </div>
-      
-
-      <div class="timeline-line"></div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">may - 17 august</div>
-          <div class="track-title">pre fyp</div>
+    <div class="main-wrapper" id="timeline-sec">
+      <div class="timeline-container">
+        <div class="timeline-title">
+          <span>f</span>
+          <span>y</span>
+          <span>p</span>
         </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">3 july</div>
-          <div class="track-title">kick off fypl - fl - fp</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">pre fyp</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">kick off fypl - fl - fp</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">training fl fp</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">briefing fl fypl</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">opening fyp b2029</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">NEXT</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">academic experience</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">NEXT follow-up</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-text">inaguration</div>
+            </div>
+          </div>
         </div>
-        <div class="timeline-dot"></div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">4 - 5 july</div>
-          <div class="track-title">training fl fp</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">14 - 16 august</div>
-          <div class="track-title">briefing fl fypl</div>
-          <div class="track-note">all must attend!</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">18 august</div>
-          <div class="track-title">opening fyp b2029</div>
-          <div class="track-note">all must attend!</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">18 - 27 august</div>
-          <div class="track-title">"next"</div>
-          <!-- <div class="track-note">best metal rock / strongest dynamic</div> -->
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">28 - 3 sept</div>
-          <div class="track-title">academic experience</div>
-          <!-- <div class="track-note">perfection of post-rock dynamics</div> -->
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">2 - 3 sept</div>
-          <div class="track-title">"next" follow-up</div>
-          <!-- <div class="track-note">significant vocals / pure</div> -->
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="album-title">4 sept</div>
-          <div class="track-title">inaguration</div>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-end">
-        <p></p>
-      </div>
-
     </div>
 
     <div class="testimonial" id="content-section">
@@ -187,6 +160,7 @@
 
     <script src="./script.js"></script>
     <script>
+      // EXPLORE
       document
         .getElementById("exploreButton")
         .addEventListener("click", function () {
@@ -194,6 +168,36 @@
           contentSection.scrollIntoView({ behavior: "smooth" });
         });
 
+      // TIMELINE
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // Function to handle animation
+      function handleScroll() {
+        const timeline = document.querySelector(".timeline");
+        if (isInViewport(timeline) && !timeline.classList.contains("animate")) {
+          timeline.classList.add("animate");
+        }
+      }
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+
+      // Trigger animation on page load
+      window.addEventListener("load", () => {
+        setTimeout(handleScroll, 500);
+      });
+
+      // CAROUSEL
       document.addEventListener("DOMContentLoaded", () => {
         const bgImages = [
           "assets/card-1.png",
