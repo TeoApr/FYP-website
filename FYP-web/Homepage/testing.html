@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Year Program Timeline</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #5a2026;
+        color: white;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Carousel Styles */
+      .carousel-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #59282b;
+      }
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+      }
+
+      .carousel-slide {
+        flex: 0 0 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      /* Make container-fypl take full height of slide */
+      .carousel-slide .container-fypl {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        animation: none; /* Disable the original animation */
+        background-image: url("./assets/bg_move.png");
+        background-size: 1255px;
+      }
+
+      /* Navigation buttons */
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .carousel-nav:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-nav.prev {
+        left: 20px;
+      }
+
+      .carousel-nav.next {
+        right: 20px;
+      }
+
+      /* Pagination dots */
+      .carousel-pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background-color: white;
+        transform: scale(1.2);
+      }
+
+      /* Enhanced confetti animation */
+      .confetti-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .confetti {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 11;
+      }
+
+      @keyframes fall {
+        0% {
+          opacity: 1;
+          transform: translate(var(--start-x), var(--start-y)) scale(0.5)
+            rotate(0deg);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(var(--end-x), var(--end-y)) scale(1)
+            rotate(var(--rotation));
+        }
+      }
+
+      /* Enhanced card hover effects */
+      .fypl-solo img,
+      .fypl-left img,
+      .fypl-right img {
+        height: 300px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .fypl-solo:hover img,
+      .fypl-left:hover img,
+      .fypl-right:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Make text more visible */
+      .container-fypl h1 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 5px;
+      }
+
+      .container-fypl p {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+        box-sizing: border-box;
+        position: relative;
+        animation: none;
+        background-image: url("./assets/bg_move.png");
+        background-size: 1255px;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .carousel-nav {
+          width: 40px;
+          height: 40px;
+          font-size: 24px;
+        }
+
+        .carousel-dot {
+          width: 10px;
+          height: 10px;
+        }
+
+        .container-fypl h1 {
+          font-size: 24px;
+        }
+      }
+
+      @media (max-width: 450px) {
+        .carousel-nav {
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+        }
+
+        .carousel-dot {
+          width: 8px;
+          height: 8px;
+        }
+
+        .container-fypl h1 {
+          font-size: 20px;
+        }
+
+        .carousel-wrapper {
+          height: 80vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <!-- First slide -->
+        <div class="carousel-slide">
+          <div class="container-fypl">
+            <h1>global business</h1>
+            <h1>management</h1>
+            <p>making deals across the world</p>
+            <div class="card-fypl">
+              <div class="fypl-solo" id="card1">
+                <img src="assets/shae-gbm.JPG" alt="" />
+                <p>shaena fazila rachman</p>
+              </div>
+              <div class="confetti-container" id="confettiContainer1"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second slide -->
+        <div class="carousel-slide">
+          <div class="container-fypl">
+            <h1>management</h1>
+            <p>leading chaos, one plan daily</p>
+            <div class="card-fypl">
+              <div class="fypl-solo" id="card2">
+                <img src="assets/alysia-management.JPG" alt="" />
+                <p>alysia kharlotta</p>
+              </div>
+              <div class="confetti-container" id="confettiContainer2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>business creation</h1>
+          <p>start stuff, break rules, repeat</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card3">
+              <img src="assets/fadil-bc.JPG" alt="" />
+              <p>muhammad fadhil habi</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer3"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>film</h1>
+          <p>lights, camera, chaos, and vibes</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card4">
+              <img src="assets/vanya-film.JPG" alt="" />
+              <p>vanya aurelia budiman</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer4"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>school of accounting</h1>
+          <p>numbers whisper, we make sense</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card5">
+              <img src="assets/nat-soa.JPG" alt="" />
+              <p>nathalie audrey christabel gultom</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer5"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>visual communication</h1>
+          <h1>design</h1>
+          <p>we make pixels talk loud</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card6">
+              <img src="assets/jo-dkv.JPG" alt="" />
+              <p>jonathan lin</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer6"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>f.o.d. communication</h1>
+          <h1>hotel n tourism</h1>
+          <p>talk smooth, host cooler than ice</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card7">
+              <img src="assets/hibran-hotel.JPG" alt="" />
+              <p>hibran aditira</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer7"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>faculty of engineering</h1>
+          <p>build things, break sleep schedules</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card8">
+              <img src="assets/nandya_foe.JPG" alt="" />
+              <p>nandya zahra armevia</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer8"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>faculty of humanities</h1>
+          <p>feelings, thoughts, and deep dives</p>
+          <div class="card-fypl">
+            <div class="fypl-solo" id="card9">
+              <img src="assets/ancilla-foh.JPG" alt="" />
+              <p>maura ancilla paramaputri</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer9"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>international business</h1>
+          <h1>management</h1>
+          <p>global hustle, local impact vibes</p>
+          <div class="card-fypl">
+            <div class="fypl-left" id="card10">
+              <img src="assets/jess.JPG" alt="" />
+              <p>jessica trishya hendra w.</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer10"></div>
+            <div class="fypl-right" id="card11">
+              <img src="assets/geb.JPG" alt="" />
+              <p>gabriel felande aulia</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer11"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>school of information</h1>
+          <h1>system</h1>
+          <p>why sql, python feels like nuts?</p>
+          <div class="card-fypl">
+            <div class="fypl-left" id="card12">
+              <img src="assets/vin.JPG" alt="" />
+              <p>vincent</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer12"></div>
+            <div class="fypl-right" id="card13">
+              <img src="assets/bagas.JPG" alt="" />
+              <p>benedictus bagas putra h.</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer13"></div>
+          </div>
+        </div>
+
+        <div class="container-fypl">
+          <h1>school of computer</h1>
+          <h1>science</h1>
+          <p>code-ing nerds? here's the peoples</p>
+          <div class="card-fypl">
+            <div class="fypl-left" id="card14">
+              <img src="assets/juan-socs.JPG" alt="" />
+              <p>juan ariviano c.</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer14"></div>
+            <div class="fypl-right" id="card15">
+              <img src="assets/teo-socs.JPG" alt="" />
+              <p>teo apriyandi</p>
+            </div>
+            <div class="confetti-container" id="confettiContainer15"></div>
+          </div>
+        </div>
+
+        <!-- Additional slides would follow the same pattern -->
+        <!-- ... -->
+      </div>
+
+      <!-- Navigation controls
+      <button class="carousel-nav prev">&lsaquo;</button>
+      <button class="carousel-nav next">&rsaquo;</button> -->
+
+      <!-- Pagination dots -->
+      <!-- <div class="carousel-pagination">
+        <span class="carousel-dot active" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+        <!-- Additional dots would be generated dynamically -->
+        <!-- ... -->
+    </div>
+
+    <script>
+      // First, let's create the carousel structure by wrapping all containers
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create the carousel wrapper
+        const carouselWrapper = document.createElement("div");
+        carouselWrapper.className = "carousel-wrapper";
+
+        // Create the inner carousel that will slide
+        const carousel = document.createElement("div");
+        carousel.className = "carousel";
+
+        // Get all the container-fypl elements
+        const containers = document.querySelectorAll(".container-fypl");
+
+        // Move each container into the carousel
+        containers.forEach((container) => {
+          // Clone the container to avoid moving the original
+          const slide = document.createElement("div");
+          slide.className = "carousel-slide";
+          slide.appendChild(container.cloneNode(true));
+          carousel.appendChild(slide);
+
+          // Remove the original container
+          container.remove();
+        });
+
+        // Add navigation controls
+        const prevButton = document.createElement("button");
+        prevButton.className = "carousel-nav prev";
+        prevButton.innerHTML = "&lsaquo;";
+
+        const nextButton = document.createElement("button");
+        nextButton.className = "carousel-nav next";
+        nextButton.innerHTML = "&rsaquo;";
+
+        // Add pagination dots
+        const pagination = document.createElement("div");
+        pagination.className = "carousel-pagination";
+
+        for (let i = 0; i < containers.length; i++) {
+          const dot = document.createElement("span");
+          dot.className = "carousel-dot";
+          dot.setAttribute("data-index", i);
+          if (i === 0) dot.classList.add("active");
+          pagination.appendChild(dot);
+        }
+
+        // Assemble the carousel structure
+        carouselWrapper.appendChild(carousel);
+        carouselWrapper.appendChild(prevButton);
+        carouselWrapper.appendChild(nextButton);
+        carouselWrapper.appendChild(pagination);
+
+        // Add to the page - right after the opening body tag
+        document.body.insertBefore(carouselWrapper, document.body.firstChild);
+
+        // Initialize carousel functionality
+        let currentSlide = 0;
+        const totalSlides = containers.length;
+        let isAnimating = false;
+
+        // Show the current slide
+        function showSlide(index) {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          // Update current slide index
+          currentSlide = index;
+
+          // Handle wrapping
+          if (currentSlide < 0) currentSlide = totalSlides - 1;
+          if (currentSlide >= totalSlides) currentSlide = 0;
+
+          // Animate the carousel
+          carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+          // Update active dot
+          document.querySelectorAll(".carousel-dot").forEach((dot, i) => {
+            dot.classList.toggle("active", i === currentSlide);
+          });
+
+          // Trigger confetti for the current slide
+          const slideElement =
+            document.querySelectorAll(".carousel-slide")[currentSlide];
+          const cardElements = slideElement.querySelectorAll('[id^="card"]');
+
+          cardElements.forEach((card) => {
+            const cardId = card.getAttribute("id");
+            const confettiContainerId = `confettiContainer${cardId.replace(
+              "card",
+              ""
+            )}`;
+            const confettiContainer = slideElement.querySelector(
+              `#${confettiContainerId}`
+            );
+
+            if (confettiContainer) {
+              createConfetti(confettiContainer);
+            }
+          });
+
+          // Reset animation flag after transition completes
+          setTimeout(() => {
+            isAnimating = false;
+          }, 500);
+        }
+
+        // Event listeners for navigation
+        prevButton.addEventListener("click", () => {
+          showSlide(currentSlide - 1);
+        });
+
+        nextButton.addEventListener("click", () => {
+          showSlide(currentSlide + 1);
+        });
+
+        // Event listeners for pagination dots
+        document.querySelectorAll(".carousel-dot").forEach((dot) => {
+          dot.addEventListener("click", () => {
+            const index = parseInt(dot.getAttribute("data-index"));
+            showSlide(index);
+          });
+        });
+
+        // Add swipe/touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener("touchstart", (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener("touchend", (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        });
+
+        function handleSwipe() {
+          const swipeThreshold = 50;
+          if (touchEndX < touchStartX - swipeThreshold) {
+            // Swipe left - next slide
+            showSlide(currentSlide + 1);
+          } else if (touchEndX > touchStartX + swipeThreshold) {
+            // Swipe right - previous slide
+            showSlide(currentSlide - 1);
+          }
+        }
+
+        // Add keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            showSlide(currentSlide - 1);
+          } else if (e.key === "ArrowRight") {
+            showSlide(currentSlide + 1);
+          }
+        });
+
+        // Confetti animation function
+        function createConfetti(container) {
+          // Clear any existing confetti
+          container.innerHTML = "";
+
+          const colors = [
+            "#FF0000",
+            "#00FF00",
+            "#0000FF",
+            "#FFFF00",
+            "#FF00FF",
+            "#00FFFF",
+          ];
+
+          // Create 30 confetti pieces
+          for (let i = 0; i < 30; i++) {
+            const confetti = document.createElement("div");
+            confetti.className = "confetti";
+
+            // Random properties
+            const size = Math.random() * 10 + 5;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            // Set CSS variables for animation
+            confetti.style.setProperty("--start-x", `${Math.random() * 100}%`);
+            confetti.style.setProperty("--start-y", "0%");
+            confetti.style.setProperty(
+              "--end-x",
+              `${Math.random() * 200 - 50}%`
+            );
+            confetti.style.setProperty(
+              "--end-y",
+              `${Math.random() * 100 + 100}%`
+            );
+            confetti.style.setProperty(
+              "--rotation",
+              `${Math.random() * 360}deg`
+            );
+
+            // Set styles
+            confetti.style.width = `${size}px`;
+            confetti.style.height = `${size}px`;
+            confetti.style.backgroundColor = color;
+            confetti.style.animation = `fall ${
+              Math.random() * 2 + 1
+            }s linear forwards`;
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.top = "0";
+
+            container.appendChild(confetti);
+          }
+        }
+
+        // Initialize the first slide with confetti
+        showSlide(0);
+
+        // Auto-play the carousel (optional)
+        let autoplayInterval = setInterval(() => {
+          showSlide(currentSlide + 1);
+        }, 5000);
+
+        // Pause autoplay on hover
+        carouselWrapper.addEventListener("mouseenter", () => {
+          clearInterval(autoplayInterval);
+        });
+
+        carouselWrapper.addEventListener("mouseleave", () => {
+          autoplayInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+          }, 5000);
+        });
+      });
+    </script>
+  </body>
+</html>

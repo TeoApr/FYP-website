@@ -561,95 +561,102 @@ body {
 }
 
 /* fypl */
-.main-card-fypl {
-  background-image: url("./assets/main-card-fypl.png");
-  background-position: center;
-  background-size: cover;
-  height: 600px;
-  border-bottom: 1px solid white;
+/* Carousel Styles */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #59282b;
 }
 
-.container-fypl {
-  background-image: url(./assets/bg_move.png);
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Make container-fypl take full height of slide */
+.carousel-slide .container-fypl {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  animation: none; /* Disable the original animation */
+  background-image: url("./assets/bg_move.png");
   background-size: 1255px;
-  /* margin-top: 50px; */
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+/* Navigation buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
   color: white;
-  gap: 5px;
-  animation: moveBackground 10s linear infinite;
-}
-
-@keyframes moveBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 1705px 0; /* Adjust based on image width/speed */
-  }
-}
-
-.container-fypl p {
-  margin-bottom: 20px;
-}
-
-.container-fypl .card-fypl {
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
-.container-fypl .card-fypl .fypl-left {
+.carousel-nav:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-nav.prev {
+  left: 20px;
+}
+
+.carousel-nav.next {
+  right: 20px;
+}
+
+/* Pagination dots */
+.carousel-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
+  z-index: 10;
 }
 
-.container-fypl .card-fypl .fypl-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.container-fypl .card-fypl .fypl-left img {
-  width: 300px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
+.carousel-dot.active {
+  background-color: white;
+  transform: scale(1.2);
 }
 
-.container-fypl .card-fypl .fypl-right img {
-  width: 300px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  object-position: 0 10%;
-}
-
-.container-fypl .card-fypl .fypl-solo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.container-fypl .card-fypl .fypl-solo img {
-  width: 300px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  object-position: 0 10%;
-}
-
+/* Enhanced confetti animation */
 .confetti-container {
   position: absolute;
   top: 0;
@@ -662,8 +669,62 @@ body {
 
 .confetti {
   position: absolute;
-  opacity: 0;
+  border-radius: 50%;
   z-index: 11;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translate(var(--start-x), var(--start-y)) scale(0.5) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--end-x), var(--end-y)) scale(1)
+      rotate(var(--rotation));
+  }
+}
+
+/* Enhanced card hover effects */
+.fypl-solo img,
+.fypl-left img,
+.fypl-right img {
+  height: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fypl-solo:hover img,
+.fypl-left:hover img,
+.fypl-right:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Make text more visible */
+.container-fypl h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+}
+
+.container-fypl p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  box-sizing: border-box;
+  position: relative;
+  animation: none;
+  background-image: url("./assets/bg_move.png");
+  background-size: 1255px;
 }
 
 @keyframes fall {
@@ -873,11 +934,19 @@ footer a img {
     height: 300px;
   }
 
-  .main-card-fypl {
-    background-image: url("./assets/main-card-fypl.png");
-    background-position: center;
-    background-size: cover;
-    height: 300px;
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .container-fypl h1 {
+    font-size: 24px;
   }
 
   .timeline-container {
@@ -1017,6 +1086,25 @@ footer a img {
     background-image: url("./assets/bg_move.png");
     background-size: 1200px;
     animation: moveBackground 10s linear infinite;
+  }
+
+  .carousel-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .container-fypl h1 {
+    font-size: 20px;
+  }
+
+  .carousel-wrapper {
+    height: 80vh;
   }
 
   footer {
