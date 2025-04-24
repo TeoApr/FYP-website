@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('../../assets/bg_move.png');
+    background-image: url('../assets/bg_move.png');
     background-size: cover;
     background-position: center center;
     background-color: #59282b;
@@ -20,7 +20,7 @@ body {
 /* .moving-background {
     width: 100%;
     height: 100vh;
-    background-image: url('../../assets/background.png'); /* Replace with your image 
+    background-image: url('../assets/background.png'); /* Replace with your image 
     background-repeat: repeat-x;
     background-size: cover;
     animation: moveBackground 10s linear infinite;
@@ -142,7 +142,7 @@ body {
 
 /* fyp */
 .first-card {
-    background-image: url('../../assets/card-1.png');
+    background-image: url('../assets/card-1.png');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -186,7 +186,7 @@ body {
 
 .timeline-container {
     /* background-color: #59282b; */
-    background-image: url('../../assets/bg_move.png');
+    background-image: url('../assets/bg_move.png');
     background-size: 1000px;
     position: relative;
     width: 100%;
@@ -287,7 +287,7 @@ body {
 }
 
 .card-faq {
-    background-image: url('../../assets//home-back.png');
+    background-image: url('../assets//home-back.png');
     background-color: #59282b;
     background-position: 50% 25%;
     background-size: cover;
@@ -490,7 +490,7 @@ body {
 
 /* fypl */
 .main-card-fypl {
-    background-image: url('../../assets/main-card-fypl.png');
+    background-image: url('../assets/main-card-fypl.png');
     background-position: center;
     background-size: cover;
     height: 600px;
@@ -498,7 +498,7 @@ body {
 }
 
 .container-fypl {
-    background-image: url(../../assets/bg_move.png);
+    background-image: url(../assets/bg_move.png);
     background-size: 1255px;
     /* margin-top: 50px; */
     padding-top: 50px;
@@ -664,7 +664,7 @@ footer a img {
 
 @media (max-width: 1024px){
     .card-faq {
-        background-image: url('../../assets//home-back.png');
+        background-image: url('../assets/home-back.png');
         background-color: #59282b;
         background-position: 50% 10%;
         background-size: 1800px;
@@ -700,7 +700,7 @@ footer a img {
     }
 
     .main-card-fypl {
-        background-image: url('../../assets/main-card-fypl.png');
+        background-image: url('../assets/main-card-fypl.png');
         background-position: center;
         background-size: cover;
         height: 400px;
@@ -754,7 +754,7 @@ footer a img {
     }
 
     .card-faq {
-        background-image: url('../../assets//home-back.png');
+        background-image: url('../assets//home-back.png');
         background-color: #59282b;
         background-position: 50% 15%;
         background-size: 1500px;
@@ -803,7 +803,7 @@ footer a img {
     }
 
     .main-card-fypl {
-        background-image: url('../../assets/main-card-fypl.png');
+        background-image: url('../assets/main-card-fypl.png');
         background-position: center;
         background-size: cover;
         height: 300px;
@@ -816,7 +816,7 @@ footer a img {
     }
 
     body {
-        background-image: url('../../assets/bg_move.png');
+        background-image: url('../assets/bg_move.png');
         background-size: cover;
         background-position: 50% 65%;
         background-color: #59282b;
@@ -845,7 +845,7 @@ footer a img {
     }
 
     .card-faq {
-        background-image: url('../../assets//home-back.png');
+        background-image: url('../assets//home-back.png');
         background-color: #59282b;
         background-position: 50% -100%;
         background-size: 1290px;
@@ -896,7 +896,7 @@ footer a img {
     }
 
     .main-card-fypl {
-        background-image: url('../../assets/main-card-fypl.png');
+        background-image: url('../assets/main-card-fypl.png');
         background-position: center;
         background-size: cover;
         height: 180px;
