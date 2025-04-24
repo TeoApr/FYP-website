@@ -787,6 +787,10 @@ body > div:nth-child(14) {
   border-top: 1px solid white;
 }
 
+.register-card h1 {
+  font-size: 25px;
+}
+
 .register-card a {
   margin-top: 15px;
   background: none;
