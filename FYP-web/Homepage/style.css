@@ -150,6 +150,7 @@ body {
   color: white;
   height: 500px;
   border-bottom: 1px solid white;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .first-card div {
@@ -1061,6 +1062,11 @@ footer a img {
     to {
       background-position: 1705px 0; /* Adjust based on image width/speed */
     }
+  }
+
+  .first-card{
+    /* max-width: 100%; */
+    background-position: center;
   }
 
   .first-card div {
