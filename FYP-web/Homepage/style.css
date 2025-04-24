@@ -779,14 +779,20 @@ body > div:nth-child(14) {
 }
 
 .register-card {
+  background-image: url('./assets/back-regist.png');
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #4c2225;
+  /* background-color: #4c2225; */
   height: 200px;
   border-top: 1px solid white;
+}
+
+.register-card img {
+  height: 300px;
 }
 
 .register-card h1 {
