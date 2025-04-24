@@ -612,7 +612,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   border-radius: 50%;
@@ -628,7 +628,7 @@ body {
 }
 
 .carousel-nav:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #59282b;
 }
 
 .carousel-nav.prev {
@@ -766,9 +766,11 @@ body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
   }
 }
 
-.fypl-solo p, .fypl-left p, .fypl-right p {
-    margin-bottom: 30px; 
-  }
+.fypl-solo p,
+.fypl-left p,
+.fypl-right p {
+  margin-bottom: 30px;
+}
 
 body > div:nth-child(14) {
   padding-bottom: 30px;
@@ -875,13 +877,15 @@ footer a img {
     height: 60vh;
     overflow: hidden;
     background-color: #59282b;
-    }
+  }
 
-    .fypl-solo img, .fypl-left img, .fypl-right img {
-        height: 350px;
-        border-radius: 10px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .fypl-solo img,
+  .fypl-left img,
+  .fypl-right img {
+    height: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 }
 
 /* responsive */
@@ -999,7 +1003,6 @@ footer a img {
   .fypl-right img {
     height: 300px;
   }
-  
 
   .card-fypl {
     flex-direction: column;
@@ -1022,7 +1025,7 @@ footer a img {
   }
 
   .carousel-pagination {
-    bottom: 25px; 
+    bottom: 25px;
   }
 
   .carousel-wrapper {
@@ -1031,7 +1034,7 @@ footer a img {
     height: 100vh;
     overflow: hidden;
     background-color: #59282b;
-}
+  }
 }
 
 @media (max-width: 450px) {
@@ -1185,7 +1188,7 @@ footer a img {
   .carousel-pagination {
     bottom: 20px; /* Adjust for small screens */
   }
-  
+
   .container-fypl h1 {
     margin-top: 3px; /* Less space on small screens */
   }
