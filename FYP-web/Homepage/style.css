@@ -207,7 +207,7 @@ body {
   font-weight: bold;
   line-height: 0.9;
   position: relative;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color: white;
   margin-right: 30px;
   display: flex;
@@ -729,7 +729,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 5px;
   font-size: 32px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .container-fypl p {
