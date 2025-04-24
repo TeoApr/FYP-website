@@ -561,11 +561,19 @@ body {
 }
 
 /* fypl */
+
+.main-card-fypl {
+  background-image: url("./assets/main-card-fypl.png");
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  border-bottom: 1px solid white;
+}
 /* Carousel Styles */
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   background-color: #59282b;
 }
@@ -634,7 +642,7 @@ body {
 /* Pagination dots */
 .carousel-pagination {
   position: absolute;
-  bottom: 20px;
+  bottom: 35px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -717,6 +725,7 @@ body {
 }
 
 .container-fypl h1 {
+  margin-top: 5px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 5px;
   font-size: 32px;
@@ -756,6 +765,10 @@ body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
       rotate(var(--rotation));
   }
 }
+
+.fypl-solo p, .fypl-left p, .fypl-right p {
+    margin-bottom: 30px; 
+  }
 
 body > div:nth-child(14) {
   padding-bottom: 30px;
@@ -855,6 +868,20 @@ footer a img {
     background-size: cover;
     height: 400px;
   }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background-color: #59282b;
+    }
+
+    .fypl-solo img, .fypl-left img, .fypl-right img {
+        height: 350px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 }
 
 /* responsive */
@@ -966,11 +993,14 @@ footer a img {
   .container-fypl h1 {
     font-size: 24px;
   }
-  
-  .fypl-solo img, .fypl-left img, .fypl-right img {
-    height: 250px;
+
+  .fypl-solo img,
+  .fypl-left img,
+  .fypl-right img {
+    height: 300px;
   }
   
+
   .card-fypl {
     flex-direction: column;
     gap: 15px;
@@ -990,6 +1020,18 @@ footer a img {
   .timeline-title span {
     margin-right: 5px;
   }
+
+  .carousel-pagination {
+    bottom: 25px; 
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #59282b;
+}
 }
 
 @media (max-width: 450px) {
@@ -1089,7 +1131,7 @@ footer a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
   }
 
   .timeline-text {
@@ -1131,11 +1173,21 @@ footer a img {
   }
 
   .carousel-wrapper {
-    height: 80vh;
+    height: 90vh;
+  }
+
+  .fypl-solo img,
+  .fypl-left img,
+  .fypl-right img {
+    height: 200px;
+  }
+
+  .carousel-pagination {
+    bottom: 20px; /* Adjust for small screens */
   }
   
-  .fypl-solo img, .fypl-left img, .fypl-right img {
-    height: 170px;
+  .container-fypl h1 {
+    margin-top: 3px; /* Less space on small screens */
   }
 
   footer {
