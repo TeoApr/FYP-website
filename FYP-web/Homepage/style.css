@@ -189,7 +189,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 20px;
   background-image: url("./assets/bg_move.png");
   background-size: 1200px;
@@ -575,7 +575,7 @@ body {
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
   background-color: #59282b;
 }
@@ -886,7 +886,7 @@ footer a img {
   .carousel-wrapper {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     overflow: hidden;
     background-color: #59282b;
   }
@@ -1165,7 +1165,7 @@ footer a img {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     padding: 20px;
     background-image: url("./assets/bg_move.png");
     background-size: 1200px;
@@ -1188,7 +1188,7 @@ footer a img {
   }
 
   .carousel-wrapper {
-    height: 90vh;
+    height: 100vh;
   }
 
   .fypl-solo img,
