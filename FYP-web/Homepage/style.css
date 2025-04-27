@@ -140,7 +140,6 @@ body {
 }
 
 /* fyp */
-
 .first-card {
   /* background-image: url("./assets/card-1.png"); */
   background-size: cover;
@@ -152,9 +151,6 @@ body {
   height: 500px;
   border-bottom: 1px solid white;
   /* background-position: 100% 75%; */
-  /* animation: bgCarousel 14s infinite;
-  background-size: cover;
-  background-position: center; */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 

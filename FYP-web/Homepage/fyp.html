@@ -19,29 +19,6 @@
       rel="stylesheet"
     />
     <title>FYP</title>
-    <style>
-      /* Background image carousel animation */
-      @keyframes bgCarousel {
-        0%, 23% {
-          background-image: url('assets/card1.png');
-        }
-        25%, 48% {
-          background-image: url('assets/card-2.png');
-        }
-        50%, 73% {
-          background-image: url('assets/card-3.jpg');
-        }
-        75%, 98% {
-          background-image: url('assets/card-4.png');
-        }
-      }
-      
-      .first-card {
-        animation: bgCarousel 14s infinite;
-        background-size: cover;
-        background-position: center;
-      }
-    </style>
   </head>
   <body>
     <nav id="navbar-container">
@@ -218,6 +195,29 @@
       // Trigger animation on page load
       window.addEventListener("load", () => {
         setTimeout(handleScroll, 500);
+      });
+
+      // CAROUSEL
+      document.addEventListener("DOMContentLoaded", () => {
+        const bgImages = [
+          "assets/card1.png",
+          "assets/card-2.png",
+          "assets/card-3.jpg",
+          "assets/card-4.png",
+        ];
+
+        let current = 0;
+        const card = document.querySelector(".first-card");
+
+        if (!card) {
+          console.warn("Element .first-card not found");
+          return;
+        }
+
+        setInterval(() => {
+          card.style.backgroundImage = `url('${bgImages[current]}')`;
+          current = (current + 1) % bgImages.length;
+        }, 3500);
       });
     </script>
   </body>
