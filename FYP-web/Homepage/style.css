@@ -768,18 +768,18 @@ body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
   }
 }
 
-.fypl-solo p,
+/* .fypl-solo p,
 .fypl-left p,
 .fypl-right p {
-  margin-bottom: 30px;
-}
+  margin-top: 30px;
+} */
 
 body > div:nth-child(14) {
   padding-bottom: 30px;
 }
 
 .register-card {
-  background-image: url('./assets/back-regist.png');
+  background-image: url("./assets/back-regist.png");
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -898,6 +898,23 @@ footer a img {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+
+  .container-fypl .card-fypl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .bbs-slide .container-fypl {
+    min-height: 180vh;
+  }
+
+  .carousel-wrapper.showing-bbs {
+    height: 220vh;
+  }
 }
 
 /* responsive */
@@ -958,7 +975,7 @@ footer a img {
     border-bottom: 1px solid white;
     background-position: center;
     transition: opacity 0.5s ease, transform 0.5s ease;
-}
+  }
 
   .card-faq {
     background-image: url("./assets//home-back.png");
@@ -1061,6 +1078,14 @@ footer a img {
     overflow: hidden;
     background-color: #59282b;
   }
+
+  .bbs-slide .container-fypl {
+    min-height: 180vh;
+  }
+
+  .carousel-wrapper.showing-bbs {
+    height: 220vh;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1076,7 +1101,7 @@ footer a img {
     border-bottom: 1px solid white;
     background-position: center;
     transition: opacity 0.5s ease, transform 0.5s ease;
-}
+  }
 
   .title-home h1 {
     font-size: 28px;
@@ -1231,6 +1256,14 @@ footer a img {
 
   .container-fypl h1 {
     margin-top: 3px; /* Less space on small screens */
+  }
+
+  .bbs-slide .container-fypl {
+    min-height: 180vh;
+  }
+
+  .carousel-wrapper.showing-bbs {
+    height: 180vh;
   }
 
   footer {
