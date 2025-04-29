@@ -590,6 +590,7 @@ body {
 .carousel-slide {
   flex: 0 0 100%;
   height: 100%;
+  /* width: 400vw; */
   position: relative;
 }
 
@@ -1234,6 +1235,7 @@ footer a img {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100vh;
     padding: 20px;
     background-image: url("./assets/bg_move.png");
     background-size: 1200px;
@@ -1255,9 +1257,10 @@ footer a img {
     font-size: 20px;
   }
 
-  /* .carousel-wrapper {
+  .carousel-wrapper {
     height: 100vh;
-  } */
+    width: 100vh;
+  }
 
   .fypl-solo img,
   .fypl-left img,

@@ -389,7 +389,7 @@
             );
             confetti.style.setProperty(
               "--end-y",
-              `${Math.random() * 100 + 100}%`
+              `${Math.random() * 2000 + 100}%`
             );
             confetti.style.setProperty(
               "--rotation",
@@ -412,7 +412,7 @@
           // Clean up confetti after animation completes
           setTimeout(() => {
             container.innerHTML = "";
-          }, 3000);
+          }, 6000);
         }
 
         // Initialize the first slide
