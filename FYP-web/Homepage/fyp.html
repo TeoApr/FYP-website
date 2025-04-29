@@ -32,7 +32,9 @@
           <li><a href="./faq.html">FAQ</a></li>
           <li><a href="./fypl.html">FYPL</a></li>
           <li><a href="https://freshmen.apps.binus.ac.id">Register</a></li>
-          <a href="#" id="close"><img src="assets/x-button.png" alt="" /></a>
+          <a href="#" id="close"
+            ><img src="assets/x-button.png" alt=""
+          /></a>
         </ul>
       </div>
 
@@ -125,126 +127,14 @@
       </div>
     </div>
 
-    <!-- <div class="testimonial" id="content-section">
+    <div class="testimonial" id="content-section">
       <h1>Chaperone's Insight</h1>
       <p>What ex F.Chaperone Says?</p>
       <div class="card-testi">
         <img src="assets/shae-testi.png" alt="" />
         <img src="assets/teo-testi.png" alt="" />
       </div>
-    </div> -->
-
-    <section class="testimonials-section">
-      <div class="title-testimonials">
-        <h1>Chaperone Insight's</h1>
-        <p>Testimonials from Past Freshmen Chaperone</p>
-      </div>
-
-      <div class="carousel-container">
-        <div class="carousel-wrapper-2" id="testimonialWrapper">
-          <div class="testimonial-card active">
-            <div class="testimonial-content">
-              "Being a Chaperone during FYP was one of the most rewarding
-              experiences of my university life. Guiding freshmen through their
-              first steps at BINUS helped me develop leadership skills while
-              creating lasting connections."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-image">
-                <img src="./assets/juan-socs.png" alt="Juan" />
-              </div>
-              <div class="author-info">
-                <h4>Juan Ariviano C.</h4>
-                <p>CS - B27</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "FYP is where I found my university family. As a Chaperone, I had
-              the opportunity to share my BINUS experience and help freshmen
-              navigate their new journey with confidence and excitement."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-image">
-                <img src="./assets/shae-gbm.png" alt="Shae" />
-              </div>
-              <div class="author-info">
-                <h4>Shaena Fazila Rachman</h4>
-                <p>GBM - B27</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "The bonds formed during FYP last far beyond orientation. As a
-              Chaperone, watching freshmen transform from nervous newcomers to
-              confident Binusians was incredibly fulfilling. It's an experience
-              I'll always treasure."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-image">
-                <img src="./assets/teo-socs.png" alt="Teo" />
-              </div>
-              <div class="author-info">
-                <h4>Teo Apriyandi</h4>
-                <p>CS - 27</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "Being a Chaperone taught me patience, empathy, and how to make
-              others feel welcome. These skills have been invaluable throughout
-              my university career and beyond."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-image">
-                <img src="./assets/vanya-film.png" alt="Vanya" />
-              </div>
-              <div class="author-info">
-                <h4>Vanya Aurelia Budiman</h4>
-                <p>Film - 27</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "FYP is where university life truly begins. As a Chaperone, I got
-              to be part of that special moment for so many freshmen. It's an
-              experience that shaped my entire BINUS journey."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-image">
-                <img src="./assets/fadil-bc.png" alt="Fadil" />
-              </div>
-              <div class="author-info">
-                <h4>Muhammad Fadhil Habi</h4>
-                <p>BC - B27</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-controls">
-          <button
-            class="control-btn prev-btn"
-            aria-label="Previous testimonial"
-          >
-            ←
-          </button>
-          <button class="control-btn next-btn" aria-label="Next testimonial">
-            →
-          </button>
-        </div>
-      </div>
-
-      <!-- Profile bubbles section removed as requested -->
-    </section>
+    </div>
 
     <div class="card-faq">
       <div>
@@ -328,108 +218,6 @@
           card.style.backgroundImage = `url('${bgImages[current]}')`;
           current = (current + 1) % bgImages.length;
         }, 3500);
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const wrapper = document.getElementById("testimonialWrapper");
-        const cards = document.querySelectorAll(".testimonial-card");
-        const prevBtn = document.querySelector(".prev-btn");
-        const nextBtn = document.querySelector(".next-btn");
-        // Profile bubbles variable removed as requested
-
-        let currentIndex = 0;
-        const totalCards = cards.length;
-
-        // Set initial state
-        updateCarousel();
-
-        // Event listeners
-        prevBtn.addEventListener("click", showPreviousCard);
-        nextBtn.addEventListener("click", showNextCard);
-
-        // Auto slide every 5 seconds
-        let autoSlideInterval = setInterval(showNextCard, 5000);
-
-        // Reset interval on manual navigation
-        function resetInterval() {
-          clearInterval(autoSlideInterval);
-          autoSlideInterval = setInterval(showNextCard, 5000);
-        }
-
-        // Profile bubbles click event removed as requested
-
-        function showNextCard() {
-          currentIndex = (currentIndex + 1) % totalCards;
-          updateCarousel();
-        }
-
-        function showPreviousCard() {
-          currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-          updateCarousel();
-          resetInterval();
-        }
-
-        function updateCarousel() {
-          // Update transform of wrapper
-          wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-          // Update active states
-          cards.forEach((card, index) => {
-            if (index === currentIndex) {
-              card.classList.add("active");
-            } else {
-              card.classList.remove("active");
-            }
-          });
-
-          // Profile bubbles update removed as requested
-        }
-
-        // Touch events for mobile swipe
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        wrapper.addEventListener("touchstart", (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-        });
-
-        wrapper.addEventListener("touchend", (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
-        });
-
-        function handleSwipe() {
-          if (touchStartX - touchEndX > 50) {
-            // Swipe left
-            showNextCard();
-            resetInterval();
-          } else if (touchEndX - touchStartX > 50) {
-            // Swipe right
-            showPreviousCard();
-            resetInterval();
-          }
-        }
-
-        // Keyboard navigation
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "ArrowLeft") {
-            showPreviousCard();
-            resetInterval();
-          } else if (e.key === "ArrowRight") {
-            showNextCard();
-            resetInterval();
-          }
-        });
-
-        // Pause auto-slide when hovering on carousel
-        const carouselContainer = document.querySelector(".carousel-container");
-        carouselContainer.addEventListener("mouseenter", function () {
-          clearInterval(autoSlideInterval);
-        });
-
-        carouselContainer.addEventListener("mouseleave", function () {
-          autoSlideInterval = setInterval(showNextCard, 5000);
-        });
       });
     </script>
   </body>
