@@ -1427,7 +1427,7 @@ footer a img {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    width: 100vh;
+    /* width: vh; */
     padding: 20px;
     background-image: url("./assets/bg_move.png");
     background-size: 1200px;
