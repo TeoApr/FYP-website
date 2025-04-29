@@ -194,6 +194,7 @@ body {
   background-image: url("./assets/bg_move.png");
   background-size: 1200px;
   animation: moveBackground 10s linear infinite;
+  border-bottom: 1px solid white;
 }
 
 .timeline-container {
@@ -560,6 +561,197 @@ body {
   transition: 0.45s;
   color: #59282b;
   transition: 0.45s;
+}
+
+
+.testimonials-section {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  color: #ff4a3f;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.testimonials-section .title-testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.testimonials-section .title-testimonials h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.testimonials-section .title-testimonials p {
+  margin-bottom: 50px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper-2 {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  padding: 2rem;
+  background-color: #4c2225;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95);
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+
+.testimonial-card.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.testimonial-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  color: white;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: white;
+}
+
+.author-info p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.control-btn {
+  background-color: #4c2225;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #cd7c8b;
+}
+
+.control-btn i {
+  font-size: 1.5rem;
+}
+
+/* Profile bubbles removed as requested */
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .testimonial-card {
+      min-width: 80%;
+      margin: 0 10%;
+  }
+
+  .testimonial-content {
+      font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial-card {
+      min-width: 60%;
+      margin: 0 20%;
+  }
+
+  .main-title {
+      font-size: 4rem;
+      max-width: 60%;
+  }
+
+  .testimonial-content {
+      font-size: 1.3rem;
+  }
+
+  /* Profile bubble responsive styles removed */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0.95); }
+}
+
+/* Profile bubble hover animation removed as requested */
+
+.testimonial-card.active {
+  animation: fadeIn 0.5s forwards;
 }
 
 /* fypl */
@@ -1299,5 +1491,45 @@ footer a img {
     justify-content: center;
     gap: 10px;
     height: 140px;
+  }
+
+  .testimonials-section {
+    background-color: #59282b;
+  }
+
+  .control-btn {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  .testimonials-section .title-testimonials h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .testimonials-section .title-testimonials p {
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+
+  .testimonial-card {
+    min-width: 100%;
+    padding: 3rem;
+    background-color: #4c2225;
+    border-radius: 8px;
+    display: flex;
+    /* margin: 20px; */
+    flex-direction: column;
+    transform: scale(0.95);
+    opacity: 0.7;
+    transition: all 0.5s ease;
+  }
+
+  .testimonial-content {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0rem;
+    flex-grow: 1;
+    color: white;
   }
 }
