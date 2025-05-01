@@ -111,7 +111,10 @@ body {
   background-color: #59282b;
   transition: height 0.5s ease;
   margin-bottom: 1px; /* Add a small separation between carousels */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  background-image: url('./assets/bg_move.png');
+  animation: moveBackground 10s linear infinite;
+  background-size: 1805px;
 }
 
 /* School header styling */
@@ -124,8 +127,8 @@ body {
   text-align: center;
   z-index: 5;
   color: white;
-  background-image: url('./assets/bg_move.png');
-  animation: moveBackground 10s linear infinite;
+  /* background-image: url('./assets/bg_move.png'); */
+  /* animation: moveBackground 10s linear infinite; */
   background-size: 1255px;
 }
 
@@ -138,8 +141,8 @@ body {
 
 .school-header p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  margin-top: 8px;
-  margin-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 15px;
   font-size: 24px;
   text-align: center;
 }
@@ -166,11 +169,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
   position: relative;
-  background-image: url("./assets/bg_move.png");
-  animation: moveBackground 10s linear infinite;
+  /* background-image: url("./assets/bg_move.png"); */
+  /* animation: moveBackground 10s linear infinite; */
   background-size: 1255px;
   color: white;
 }
@@ -424,6 +427,7 @@ footer a img {
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 0.3s;
+    z-index: 6;
   }
 
   #resp-nav.active {
@@ -478,6 +482,27 @@ footer a img {
     height: 40px;
   }
 
+  .school-header p{
+    margin-bottom: 0px;
+  }
+
+  .container-fypl {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    position: relative;
+    /* background-image: url("./assets/bg_move.png"); */
+    /* animation: moveBackground 10s linear infinite; */
+    background-size: 1255px;
+    color: white;
+}
+
+
   .carousel-nav.prev {
     left: 10px;
   }
@@ -499,9 +524,16 @@ footer a img {
   .carousel-wrapper {
     height: 650px;
   }
+
 }
 
 @media screen and (max-width: 480px) {
+
+  .main-card-fypl {
+    height: 175px;
+    border-bottom: 1px solid white;
+  }
+
   .fypl-solo {
     width: 160px;
   }
@@ -532,10 +564,15 @@ footer a img {
   
   .carousel {
     padding-top: 100px;
+    height: 70vh;
   }
   
   .carousel-wrapper {
-    height: 600px;
+    height: 500px;
+  }
+
+  body > div:nth-child(3) > div.school-header > h1{
+    padding-top: 5vh;
   }
   
   .register-card h1 {

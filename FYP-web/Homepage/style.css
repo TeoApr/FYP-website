@@ -796,8 +796,8 @@ body {
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  background-image: url("./assets/bg_move.png");
-  animation: moveBackground 10s linear infinite;
+  /* background-image: url("./assets/bg_move.png"); */
+  /* animation: moveBackground 10s linear infinite; */
   background-size: 1255px;
   color: white;
 }
@@ -952,8 +952,8 @@ body > div:nth-child(1) > div.carousel > div:nth-child(10) > div > div {
   box-sizing: border-box;
   position: relative;
   animation: none;
-  background-image: url("./assets/bg_move.png");
-  background-size: 1255px;
+  /* background-image: url("./assets/bg_move.png"); */
+  /* background-size: 1255px; */
 }
 
 @keyframes fall {
@@ -987,7 +987,7 @@ body > div:nth-child(14) {
 }
 
 .register-card {
-  background-image: url("./assets/back-regist.png");
+  /* background-image: url("./assets/back-regist.png"); */
   background-position: center;
   display: flex;
   flex-direction: column;
