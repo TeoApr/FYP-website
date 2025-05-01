@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>FYPL</title>
+    <style>
+      /* Add any additional styles needed */
+      .carousel-wrapper {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto 50px;
+        overflow: hidden;
+      }
+      
+      .static-header {
+        text-align: center;
+        padding: 20px 0;
+      }
+      
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      
+      .carousel-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .card-fypl {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      
+      .student-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+        width: 250px;
+      }
+      
+      .student-card:hover {
+        transform: translateY(-10px);
+      }
+      
+      .student-card img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+      
+      .student-card p:first-child {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .student-card p:last-child {
+        margin-top: 10px;
+      }
+      
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 10;
+      }
+      
+      .carousel-nav.prev {
+        left: 10px;
+      }
+      
+      .carousel-nav.next {
+        right: 10px;
+      }
+      
+      .carousel-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      
+      .carousel-dot.active {
+        background-color: #333;
+      }
+      
+      .confetti-container {
+        position: absolute;
+        pointer-events: none;
+        z-index: 100;
+      }
+      
+      .confetti {
+        position: absolute;
+        border-radius: 3px;
+        opacity: 0.7;
+      }
+      
+      @keyframes fall {
+        0% {
+          transform: translate(var(--start-x), var(--start-y)) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(var(--end-x), var(--end-y)) rotate(var(--rotation));
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar-container">
+      <a href="./fyp.html" id="logo-fypl"
+        ><img src="./assets/Logo.png" alt="logo" id="logo-nav"
+      /></a>
+
+      <div>
+        <ul id="resp-nav">
+          <li><a href="./fyp.html">FYP</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./fypl.html">FYPL</a></li>
+          <li><a href="https://freshmen.apps.binus.ac.id">Register</a></li>
+          <a href="#" id="close"><img src="assets/x-button.png" alt="" /></a>
+        </ul>
+      </div>
+
+      <div id="mobile">
+        <i id="bar"><img src="assets/drop-button.png" alt="" /></i>
+      </div>
+    </nav>
+
+    <div class="main-card-fypl"></div>
+
+    <!-- School of Computer Science Section -->
+    <div class="carousel-wrapper" id="socs-carousel">
+      <!-- Static header that doesn't change -->
+      <div class="static-header">
+        <h1>School of Computer</h1>
+        <h1>Science</h1>
+        <p>Code-ing Nerds? Here's the Peoples</p>
+      </div>
+      
+      <!-- Carousel that changes only student cards -->
+      <div class="carousel">
+        <div class="carousel-slide">
+          <div class="student-card" id="card1">
+            <p>CS</p>
+            <img src="assets/juan-socs.png" alt="Juan Ariviano" />
+            <p>Juan Ariviano C.</p>
+            <div class="confetti-container" id="confettiContainer1"></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <div class="student-card" id="card2">
+            <p>CS</p>
+            <img src="assets/teo-socs.png" alt="Teo Apriyandi" />
+            <p>Teo Apriyandi</p>
+            <div class="confetti-container" id="confettiContainer2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-nav prev"><p>&lsaquo;</p></button>
+      <button class="carousel-nav next"><p>&rsaquo;</p></button>
+
+      <!-- Pagination dots -->
+      <div class="carousel-pagination"></div>
+    </div>
+
+    <!-- School of Accounting Section -->
+    <div class="carousel-wrapper" id="soa-carousel">
+      <!-- Static header that doesn't change -->
+      <div class="static-header">
+        <h1>School of Accounting</h1>
+        <p>Numbers Whisper, We Make Sense</p>
+      </div>
+      
+      <!-- Carousel that changes only student cards -->
+      <div class="carousel">
+        <div class="carousel-slide">
+          <div class="student-card" id="card5">
+            <p>Accounting</p>
+            <img src="assets/nat-soa.png" alt="Nathalie Audrey" />
+            <p>Nathalie Audrey Christabel Gultom</p>
+            <div class="confetti-container" id="confettiContainer5"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-nav prev"><p>&lsaquo;</p></button>
+      <button class="carousel-nav next"><p>&rsaquo;</p></button>
+
+      <!-- Pagination dots -->
+      <div class="carousel-pagination"></div>
+    </div>
+
+    <!-- Register Section -->
+    <div class="register-card">
+      <h1>Register Now!</h1>
+      <a href="https://freshmen.apps.binus.ac.id">Go to Freshman Apps</a>
+    </div>
+
+    <footer>
+      <p>See you in FYP! - @efwaipiel.alsut</p>
+      <a
+        href="https://www.instagram.com/efwaipiel.alsut?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ><img src="assets/instagram.png" alt="instagram-logo"
+      /></a>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to initialize a carousel
+        function initializeCarousel(carouselWrapperId) {
+          const carouselWrapper = document.getElementById(carouselWrapperId);
+          const carousel = carouselWrapper.querySelector(".carousel");
+          const slides = carouselWrapper.querySelectorAll(".carousel-slide");
+          const totalSlides = slides.length;
+          const prevButton = carouselWrapper.querySelector(".carousel-nav.prev");
+          const nextButton = carouselWrapper.querySelector(".carousel-nav.next");
+          const pagination = carouselWrapper.querySelector(".carousel-pagination");
+          
+          let currentSlide = 0;
+          let isAnimating = false;
+          let autoplayInterval;
+
+          // Create pagination dots
+          for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement("span");
+            dot.className = "carousel-dot";
+            dot.setAttribute("data-index", i);
+            if (i === 0) dot.classList.add("active");
+            pagination.appendChild(dot);
+
+            // Add click event to each dot
+            dot.addEventListener("click", () => {
+              if (!isAnimating) {
+                showSlide(i);
+              }
+            });
+          }
+
+          // Function to show a specific slide
+          function showSlide(index) {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            // Update current slide index
+            currentSlide = index;
+
+            // Handle wrapping
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+
+            // Animate the carousel
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update active dot
+            carouselWrapper.querySelectorAll(".carousel-dot").forEach((dot, i) => {
+              dot.classList.toggle("active", i === currentSlide);
+            });
+
+            // Reset animation flag after transition completes
+            setTimeout(() => {
+              isAnimating = false;
+            }, 500);
+          }
+
+          // Event listeners for navigation buttons
+          prevButton.addEventListener("click", () => {
+            showSlide(currentSlide - 1);
+          });
+
+          nextButton.addEventListener("click", () => {
+            showSlide(currentSlide + 1);
+          });
+
+          // Add swipe/touch support
+          let touchStartX = 0;
+          let touchEndX = 0;
+
+          carousel.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          });
+
+          carousel.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          });
+
+          function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+              // Swipe left - next slide
+              showSlide(currentSlide + 1);
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+              // Swipe right - previous slide
+              showSlide(currentSlide - 1);
+            }
+          }
+
+          // Confetti effects for student cards
+          const studentCards = carouselWrapper.querySelectorAll(".student-card");
+          
+          studentCards.forEach((card) => {
+            card.addEventListener("mouseenter", function() {
+              const cardId = card.getAttribute("id");
+              const confettiContainerId = `confettiContainer${cardId.replace("card", "")}`;
+              const confettiContainer = card.querySelector(`.confetti-container`);
+              
+              if (confettiContainer) {
+                createConfetti(confettiContainer);
+              }
+            });
+          });
+
+          // Initialize the first slide
+          showSlide(0);
+
+          // Auto-play the carousel
+          startAutoplay();
+
+          // Pause autoplay on hover
+          carouselWrapper.addEventListener("mouseenter", () => {
+            clearInterval(autoplayInterval);
+          });
+
+          carouselWrapper.addEventListener("mouseleave", () => {
+            startAutoplay();
+          });
+
+          function startAutoplay() {
+            clearInterval(autoplayInterval);
+            autoplayInterval = setInterval(() => {
+              showSlide(currentSlide + 1);
+            }, 5000);
+          }
+        }
+
+        // Confetti animation function
+        function createConfetti(container) {
+          // Clear any existing confetti
+          container.innerHTML = "";
+
+          const colors = [
+            "#FF0000", "#00FF00", "#0000FF", 
+            "#FFFF00", "#FF00FF", "#00FFFF"
+          ];
+
+          // Create confetti pieces
+          for (let i = 0; i < 30; i++) {
+            const confetti = document.createElement("div");
+            confetti.className = "confetti";
+
+            // Random properties
+            const size = Math.random() * 10 + 5;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            // Set CSS variables for animation
+            confetti.style.setProperty("--start-x", `${Math.random() * 100}%`);
+            confetti.style.setProperty("--start-y", "0%");
+            confetti.style.setProperty("--end-x", `${Math.random() * 200 - 50}%`);
+            confetti.style.setProperty("--end-y", `${Math.random() * 100 + 100}%`);
+            confetti.style.setProperty("--rotation", `${Math.random() * 360}deg`);
+
+            // Set styles
+            confetti.style.width = `${size}px`;
+            confetti.style.height = `${size}px`;
+            confetti.style.backgroundColor = color;
+            confetti.style.animation = `fall ${Math.random() * 2 + 1}s linear forwards`;
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.top = "0";
+
+            container.appendChild(confetti);
+          }
+
+          // Clean up confetti after animation completes
+          setTimeout(() => {
+            container.innerHTML = "";
+          }, 3000);
+        }
+
+        // Initialize all carousels
+        initializeCarousel("socs-carousel");
+        initializeCarousel("soa-carousel");
+
+        // Mobile navigation menu
+        const bar = document.getElementById("bar");
+        const close = document.getElementById("close");
+        const nav = document.getElementById("resp-nav");
+
+        if (bar) {
+          bar.addEventListener("click", () => {
+            nav.classList.add("active");
+          });
+        }
+
+        if (close) {
+          close.addEventListener("click", () => {
+            nav.classList.remove("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
