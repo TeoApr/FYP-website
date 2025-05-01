@@ -987,7 +987,7 @@ body > div:nth-child(14) {
 }
 
 .register-card {
-  /* background-image: url("./assets/back-regist.png"); */
+  background-image: url("./assets/back-regist.png");
   background-position: center;
   display: flex;
   flex-direction: column;
