@@ -542,7 +542,7 @@
             ];
 
             // Create confetti pieces
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 60; i++) {
               const confetti = document.createElement("div");
               confetti.className = "confetti";
 
@@ -554,7 +554,7 @@
               confetti.style.setProperty("--start-x", `${Math.random() * 100}%`);
               confetti.style.setProperty("--start-y", "0%");
               confetti.style.setProperty("--end-x", `${Math.random() * 200 - 50}%`);
-              confetti.style.setProperty("--end-y", `${Math.random() * 100 + 100}%`);
+              confetti.style.setProperty("--end-y", `${Math.random() * 4000 + 100}%`);
               confetti.style.setProperty("--rotation", `${Math.random() * 360}deg`);
 
               // Set styles
