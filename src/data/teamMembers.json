@@ -1,0 +1,137 @@
+[
+  {
+    "id": "nat-soa",
+    "school": "School of Accounting",
+    "schoolSlug": "soa",
+    "schoolTagline": "Numbers Whisper, We Make Sense",
+    "major": "Accounting",
+    "name": "Nathalie Audrey Christabel Gultom",
+    "image": "/assets/nat-soa.png"
+  },
+  {
+    "id": "hibran-fod",
+    "school": "F.O.D. Communication Hotel and Tourism",
+    "schoolSlug": "fod",
+    "schoolTagline": "Talk Smooth, Host Cooler than Ice",
+    "major": "Marketing Com.",
+    "name": "Hibran Aditira",
+    "image": "/assets/hibran-hotel.png"
+  },
+  {
+    "id": "nandya-foe",
+    "school": "Faculty of Engineering",
+    "schoolSlug": "foe",
+    "schoolTagline": "Build Things, Break Sleep Schedules",
+    "major": "Biotechnology",
+    "name": "Nandya Zahra Armevia",
+    "image": "/assets/nandya_foe.png"
+  },
+  {
+    "id": "ancilla-foh",
+    "school": "Faculty of Humanities",
+    "schoolSlug": "foh",
+    "schoolTagline": "Feelings, Thoughts, and Deep Dives",
+    "major": "IR - GC",
+    "name": "Maura Ancilla Paramaputri",
+    "image": "/assets/ancilla-foh.png"
+  },
+  {
+    "id": "gabriel-bbs",
+    "school": "BINUS Business School",
+    "schoolSlug": "bbs",
+    "schoolTagline": "Where Group Projects Test Friendships",
+    "major": "IBM",
+    "name": "Gabriel Felande Aulia",
+    "image": "/assets/geb.png"
+  },
+  {
+    "id": "jessica-bbs",
+    "school": "BINUS Business School",
+    "schoolSlug": "bbs",
+    "schoolTagline": "Where Group Projects Test Friendships",
+    "major": "IBM - GC",
+    "name": "Jessica Trishya Hendra W.",
+    "image": "/assets/jess.png"
+  },
+  {
+    "id": "alysia-bbs",
+    "school": "BINUS Business School",
+    "schoolSlug": "bbs",
+    "schoolTagline": "Where Group Projects Test Friendships",
+    "major": "Management",
+    "name": "Alysia Kharlotta",
+    "image": "/assets/alysia-management.png"
+  },
+  {
+    "id": "shaena-bbs",
+    "school": "BINUS Business School",
+    "schoolSlug": "bbs",
+    "schoolTagline": "Where Group Projects Test Friendships",
+    "major": "GBM",
+    "name": "Shaena Fazila Rachman",
+    "image": "/assets/shae-gbm.png"
+  },
+  {
+    "id": "fadhil-bbs",
+    "school": "BINUS Business School",
+    "schoolSlug": "bbs",
+    "schoolTagline": "Where Group Projects Test Friendships",
+    "major": "BC",
+    "name": "Muhammad Fadhil Habi",
+    "image": "/assets/fadil-bc.png"
+  },
+  {
+    "id": "jonathan-sod",
+    "school": "School of Design",
+    "schoolSlug": "sod",
+    "schoolTagline": "Sleep? Sorry, Deadlines Need Love",
+    "major": "DKV",
+    "name": "Jonathan Lin",
+    "image": "/assets/jo-dkv.png"
+  },
+  {
+    "id": "vanya-sod",
+    "school": "School of Design",
+    "schoolSlug": "sod",
+    "schoolTagline": "Sleep? Sorry, Deadlines Need Love",
+    "major": "Film",
+    "name": "Vanya Aurelia Budiman",
+    "image": "/assets/vanya-film.png"
+  },
+  {
+    "id": "vincent-sis",
+    "school": "School of Information System",
+    "schoolSlug": "sis",
+    "schoolTagline": "Why SQL, Python Feels Like Nuts?",
+    "major": "IS",
+    "name": "Vincent",
+    "image": "/assets/vin.png"
+  },
+  {
+    "id": "bagas-sis",
+    "school": "School of Information System",
+    "schoolSlug": "sis",
+    "schoolTagline": "Why SQL, Python Feels Like Nuts?",
+    "major": "IS",
+    "name": "Benedictus Bagas Putra H.",
+    "image": "/assets/bagas.png"
+  },
+  {
+    "id": "juan-socs",
+    "school": "School of Computer Science",
+    "schoolSlug": "socs",
+    "schoolTagline": "Code-ing Nerds? Here's the Peoples",
+    "major": "CS",
+    "name": "Juan Ariviano C.",
+    "image": "/assets/juan-socs.png"
+  },
+  {
+    "id": "teo-socs",
+    "school": "School of Computer Science",
+    "schoolSlug": "socs",
+    "schoolTagline": "Code-ing Nerds? Here's the Peoples",
+    "major": "CS",
+    "name": "Teo Apriyandi",
+    "image": "/assets/teo-socs.png"
+  }
+]
